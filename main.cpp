@@ -18,7 +18,7 @@ double Function(Creature creature)
 
 void Mutation(Creature &creature)
 {
-    double d=0.025;
+    double d=0.05;
     if(rand()%10+1<=5)
     {
         if(rand()%10+1<=5)
@@ -37,7 +37,7 @@ void Mutation(Creature &creature)
 
 void Genetic(Creature *population)
 {
-    double P_nothit[4]={0,0,0,0},x_buf[3]={0,0,0},y_buf[3]={0,0,0},P_summary=0,random,maximum;
+    double P_nothit[4],x_buf[3]={0,0,0},y_buf[3]={0,0,0},P_summary=0,random,maximum;
     int j_ignore=0,j_maximum=0,k=0;
     for(int j=0;j<4;j++)
     {
@@ -79,8 +79,6 @@ void Genetic(Creature *population)
             j_maximum=j;
         }
     }
-    x_buf[0]=x_buf[1]=x_buf[2]=0;
-    y_buf[0]=y_buf[1]=y_buf[2]=0;
     k=0;
     for(int j=0;j<4;j++)
     {
